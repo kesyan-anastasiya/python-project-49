@@ -1,4 +1,4 @@
-setup: install brain-games build publish package-install 
+setup: install brain-games build publish package-install lint 
 
 install:
 	poetry install
@@ -16,4 +16,7 @@ package-install:
 	python3 -m pip install --user dist/*.whl
 
 package-install-force:
-	 python3 -m pip install --user dist/*.whl --force-reinstall
+	python3 -m pip install --user dist/*.whl --force-reinstall
+
+lint:
+	poetry run flake8 brain_games
