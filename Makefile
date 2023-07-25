@@ -1,10 +1,13 @@
-setup: install brain-games build publish package-install lint 
+setup: install build publish package-install lint 
 
 install:
 	poetry install
 
 brain-games:
 	poetry run brain-games
+
+brain-even:
+	poetry run brain-even
 
 build:
 	poetry build
